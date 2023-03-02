@@ -30,7 +30,7 @@
 
 - Input your message to be sent to the server.
 
-- Press enter, you should get a message in the terminal window indicated that your message has been encrypted, received, and stored successfully.
+- Press enter, you should get a message in the terminal window indicating that your message has been encrypted, received, and stored successfully.
 
 ```
     C:\Users\roryo\OneDrive\Desktop\Computer Networks>python MERCURY_Client.py
