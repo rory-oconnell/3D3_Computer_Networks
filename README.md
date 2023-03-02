@@ -1,8 +1,6 @@
 
 # MERCURY README
 
-## This README will indicate how to use the MERCURY messaging network.
-
 ## Very Important - The Following Libraries are required in order for this program to work
 ### - pip install pycrypto
 ### - pip install rsa
