@@ -28,7 +28,7 @@
 
 - In the terminal window, run the MERCURY_Client.py file using the command: python MERCURY_Client.py
 
-- Input your message to be sent to the server.
+- Input your message to be sent to the server. Note that if you input a message that is over 1000 characters in length, message will be rejected and the user will be reprompted to enter a message. This is a security feature to prevent bad actors from flooding the server storage with a single message.
 
 - Press enter, you should get a message in the terminal window indicating that your message has been encrypted, received, and stored successfully.
 
