@@ -3,7 +3,6 @@ from Crypto.PublicKey import RSA
 from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES, PKCS1_OAEP
 
-
 # Encryption function using RSA and AES
 def RSAEncrypt(data, recipient_key):
 
@@ -23,6 +22,11 @@ serverPort = 12000
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
 sentence = input('Input message to be encrypted and sent to the server:')
+
+# Reprompt user if message is too long - security measure to stop single messages from flooding the server
+while len(sentence) > 1000:
+    print("Message is too long. Please try again.")
+    sentence = input('Input message to be encrypted and sent to the server:')
 
 sentence = sentence.encode("utf-8")
 file_out = open("encrypted_data.bin", "wb")
