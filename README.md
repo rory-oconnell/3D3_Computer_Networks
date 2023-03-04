@@ -30,7 +30,7 @@
 
 - Input your message to be sent to the server. Note that if you input a message that is over 1000 characters in length, message will be rejected and the user will be reprompted to enter a message. This is a security feature to prevent bad actors from flooding the server storage with a single message.
 
--
+- You will also be prompted to enter a key. This is key is for the proprietary encryption method. The assumption is that this key is known to both parties. It is an integer. Note that any attempts to enter a non integer are rejected and reprompted.
 
 - Press enter, you should get a message in the terminal window indicating that your message has been encrypted, received, and stored successfully.
 
