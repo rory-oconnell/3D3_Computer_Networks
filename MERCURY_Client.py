@@ -4,7 +4,7 @@ from Crypto.Random import get_random_bytes
 from Crypto.Cipher import AES, PKCS1_OAEP
 
 # Encryption function using RSA and AES
-def RSAEncrypt(data, recipient_key):
+def AES_RSA_Encrypt(data, recipient_key):
 
     # Encrypt the session key with the public RSA key
     cipher_rsa = PKCS1_OAEP.new(recipient_key)
@@ -17,7 +17,14 @@ def RSAEncrypt(data, recipient_key):
     file_out.close()
 
 def SecondEncrypt(message):
-    key = int(input('what is the numeric key?\n'))
+
+    key = input('What is the numeric key?')
+
+    while key.isdigit() == False:
+        print("The key must be an integer. Please try again.")
+        key = input('What is the numeric key?')
+
+    key = int(key)
 
     words = message.split(' ')
     new_string = []
@@ -54,7 +61,7 @@ file_out = open("encrypted_data.bin", "wb")
 recipient_key = RSA.import_key(open("receiver.pem").read())
 session_key = get_random_bytes(16)
 
-RSAEncrypt(sentence, recipient_key)
+AES_RSA_Encrypt(sentence, recipient_key)
 
 payload = open("encrypted_data.bin", "rb").read()
 clientSocket.send(payload)

@@ -1,6 +1,7 @@
-from Crypto.PublicKey import RSA
-from Crypto.Random import get_random_bytes
-from Crypto.Cipher import AES, PKCS1_OAEP
+from Crypto.PublicKey import RSA    # RSA will be used to encrypt the AES session key
+from Crypto.Cipher import AES, PKCS1_OAEP   # AES will be used to encrypt the message
+from Crypto.Random import get_random_bytes  # Random bytes will be used to generate the AES session key
+
 
 data = "This is the encrypted message that will be sent to the server".encode("utf-8")
 file_out = open("encrypted_data.bin", "wb")
