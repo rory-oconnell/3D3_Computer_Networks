@@ -13,7 +13,6 @@
     - MERCURY_Server.py
     - MERCURY_Client.py
     - generateRSA.py
-    - encryptAll.py
     - decryptAll.py
 
 - Open a terminal window and navigate to the folder containing the files.

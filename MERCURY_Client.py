@@ -17,7 +17,7 @@ def AES_RSA_Encrypt(data, recipient_key):
     file_out.close()    # Close the file
 
 def SecondEncrypt(message): # This function will encrypt the message using a Caesar cipher
-    key = input('What is the numeric key?') # Get the key from the user
+    key = input('What is the numeric key known only to you and the receiver?') # Get the key from the user
 
     while key.isdigit() == False:   # Check if the key is an integer
         print("The key must be an integer. Please try again.")

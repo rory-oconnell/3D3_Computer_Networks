@@ -2,7 +2,13 @@ from Crypto.PublicKey import RSA    # RSA will be used to encrypt the AES sessio
 from Crypto.Cipher import AES, PKCS1_OAEP   # AES will be used to encrypt the message
 
 def SecondDecrypt(message):
-    key = int(input('what is the numeric key?\n'))
+    key = input('Please enter the numeric key known only to you and the sender...\n')
+
+    while key.isdigit() == False:   # Check if the key is an integer
+        print("The key must be an integer. Please try again.")
+        key = input('What is the numeric key?')
+
+    key = int(key)
     temp2=''
     decrypt =[]
     for i in message:
