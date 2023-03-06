@@ -42,4 +42,8 @@
 
 - The file has been encrypted using RSA and AES methodologies and has been sent to the server via a TCP connection, ensuring reliable, in order, and uncorrupted, transmission. In VSCode you can see that the encrypted message has been printed out for demonstration purposes.
 
-- Kill the running processes as the server is still listening for a message. Navigate the decryptAll.py file, and run the program. Upon running the file, you will see the decrypted message print out in the VSCode terminal.
+- At this point in the overall idea, the encrypted message is converyed to an area with an internet connection via drone. The drone uploads the encrypted file to a cloud server, where it is then sent to the intended recipient. The next step is taken by the receiver to decode the message.
+
+- Kill the running processes as the server is still listening for a message. 
+
+- Navigate the decryptAll.py file, and run the program. This program will decrypt the AES Session key that was encrypted using RSA encryption. The decrypted AES key is then used to decrypt the message into the cipher. You will be prompted to enter the key for the cipher. Once entered, the cipher is translated back to the original message. Upon running the file, you will see the decrypted message print out in the VSCode terminal. The message has been transmitted securely.
