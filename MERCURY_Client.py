@@ -48,7 +48,7 @@ clientSocket.connect((serverName, serverPort))  # Connect to the server
 sentence = input('Input message to be encrypted and sent to the server:')
 
 # Reprompt user if message is too long - security measure to stop single messages from flooding the server
-while len(sentence) > 10: # 1000 is an arbitrary number, but should limit messages to a reasonable size
+while len(sentence) > 1000: # 1000 is an arbitrary number, but should limit messages to a reasonable size
     print("Message is too long. Please try again.")
     sentence = input('Input message to be encrypted and sent to the server:')
 
