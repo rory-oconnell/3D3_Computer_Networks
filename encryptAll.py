@@ -1,4 +1,4 @@
-from Crypto.PublicKey import RSA    # RSA will be used to encrypt the AES session key
+from Crypto.PublicKey import RSA            # RSA will be used to encrypt the AES session key
 from Crypto.Cipher import AES, PKCS1_OAEP   # AES will be used to encrypt the message
 from Crypto.Random import get_random_bytes  # Random bytes will be used to generate the AES session key
 
